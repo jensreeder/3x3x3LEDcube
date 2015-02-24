@@ -5,7 +5,7 @@
 /*
   CONTROL 3X3X3 LED CUBE
 
-  The 27 leds are electrically arranged in a 3x9 sheet.
+  The 27 LEDs are electrically arranged in a 3x9 sheet.
   Physically, the sheet is folded back onto itself three times,
   thus creating a 3x3x3 cube.
  
@@ -18,11 +18,13 @@
   
   The cube is refreshed at 50Hz using an interrupt routine.
 
+  Author: Jens Reeder
  */
 
 int dataPin  = 1;
 int clockPin = 2;
 int latchPin = 0;
+
 ChainedShiftRegister595 shift = ChainedShiftRegister595(latchPin, clockPin, dataPin);
 
 //global variable storing the actual content to be displayed on the 3x3x3 cube
